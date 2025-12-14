@@ -1,70 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Maya’s Art</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: "Georgia", serif;
-      background-color: #f6f1ec;
-      color: #333;
-      text-align: center;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(#eaf4ec, #f7fbf8);
+      color: #2f4f3a;
     }
 
     header {
-      padding: 60px 20px;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(180deg, #cfe8d6, #eaf4ec);
     }
 
-    h1 {
+    header h1 {
+      font-family: 'Playfair Display', serif;
       font-size: 3rem;
       margin-bottom: 10px;
     }
 
-    p {
-      font-size: 1.1rem;
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      padding: 40px;
-      max-width: 1000px;
-      margin: auto;
     }
 
-    .gallery img {
-      width: 100%;
+    .card {
+      background: #ffffffcc;
       border-radius: 16px;
-    }
+      padding: 15px;
+      box-shadow: 0 10px 25px rgba(
 
-    footer {
-      padding: 40px;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <h1>Maya’s Art ✨</h1>
-    <p>Original art & custom illustrations</p>
-  </header>
-
-  <section class="gallery">
-    <img src="https://via.placeholder.com/400x500">
-    <img src="https://via.placeholder.com/400x500">
-    <img src="https://via.placeholder.com/400x500">
-  </section>
-
-  <footer>
-    © 2025 Maya
-  </footer>
-
-</body>
-</html>
 
