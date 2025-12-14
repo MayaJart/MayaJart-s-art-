@@ -4,14 +4,11 @@
   <meta charset="UTF-8">
   <title>Maya’s Art</title>
 
-  <!-- Pretty Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
-
   <style>
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #faf7f5;
+      font-family: "Georgia", serif;
+      background-color: #f6f1ec;
       color: #333;
       text-align: center;
     }
@@ -21,20 +18,32 @@
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
+      font-size: 3rem;
       margin-bottom: 10px;
     }
 
     p {
-      font-size: 1.1em;
-      max-width: 600px;
-      margin: 0 auto;
+      font-size: 1.1rem;
     }
 
-    .emoji {
-      font-size: 2em;
-      margin-top: 20px;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    footer {
+      padding: 40px;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
@@ -42,12 +51,19 @@
 <body>
 
   <header>
-    <h1>Maya’s Art</h1>
-    <p>
-      Original artwork & custom illustrations made with care.
-    </p>
-    <div class="emoji">🎨✨</div>
+    <h1>Maya’s Art ✨</h1>
+    <p>Original art & custom illustrations</p>
   </header>
+
+  <section class="gallery">
+    <img src="https://via.placeholder.com/400x500">
+    <img src="https://via.placeholder.com/400x500">
+    <img src="https://via.placeholder.com/400x500">
+  </section>
+
+  <footer>
+    © 2025 Maya
+  </footer>
 
 </body>
 </html>
