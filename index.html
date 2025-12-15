@@ -3,54 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Maya’s Art</title>
-
   <style>
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
-      background-size: cover;
-      background-position: center;
-      min-height: 100vh;
-      color: #2b2b2b;
+      font-family: "Georgia", serif;
+      background: #f5f2ed;
+      color: #2e2e2e;
     }
-
-    .overlay {
-      background: rgba(255,255,255,0.75);
-      min-height: 100vh;
+    header {
       padding: 60px;
+      text-align: center;
+      background: #e6ddd2;
     }
-
     h1 {
       font-size: 3rem;
+      margin-bottom: 10px;
     }
-
     p {
       font-size: 1.2rem;
-      max-width: 600px;
     }
   </style>
 </head>
-
 <body>
-  <div class="overlay">
-    <h1>Maya’s Art</h1>
-    <p>
-      Welcome to my art space ✨  
-      I create original pieces and custom drawings.
-    </p>
-  </div>
-
-  <script>
-    const month = new Date().getMonth(); // 0 = Jan, 11 = Dec
-    let bg = "winter.jpg";
-
-    if (month >= 2 && month <= 4) bg = "spring.jpg";
-    if (month >= 5 && month <= 7) bg = "summer.jpg";
-    if (month >= 8 && month <= 10) bg = "autumn.jpg";
-    if (month === 11 || month <= 1) bg = "winter.jpg";
-
-    document.body.style.backgroundImage = `url(${bg})`;
-  </script>
+  <header>
+    <h1>Maya’s Art ✨</h1>
+    <p>Original art & custom commissions</p>
+  </header>
 </body>
 </html>
 
