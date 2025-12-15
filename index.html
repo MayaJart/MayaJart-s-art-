@@ -3,89 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>Maya’s Art</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      transition: background 1s ease;
-      color: #333;
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      color: #2b2b2b;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
-      text-align: center;
+    .overlay {
+      background: rgba(255,255,255,0.75);
+      min-height: 100vh;
+      padding: 60px;
     }
 
     h1 {
       font-size: 3rem;
-      margin-bottom: 10px;
     }
 
     p {
       font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      border-radius: 20px;
-      margin-top: 30px;
+      max-width: 600px;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1 id="season-title">Welcome to Maya’s Art</h1>
-    <p id="season-text">
-      A space for art, commissions, and gentle creativity.
+  <div class="overlay">
+    <h1>Maya’s Art</h1>
+    <p>
+      Welcome to my art space ✨  
+      I create original pieces and custom drawings.
     </p>
-
-    <img id="season-image" src="" alt="Seasonal art">
   </div>
 
   <script>
-    const month = new Date().getMonth();
+    const month = new Date().getMonth(); // 0 = Jan, 11 = Dec
+    let bg = "winter.jpg";
 
-    const seasons = [
-      {
-        title: "Winter Stillness ❄️",
-        text: "Quiet tones, soft light, and cozy creativity.",
-        bg: "#eef3f9",
-        img: "winter.jpg"
-      },
-      {
-        title: "Spring Bloom 🌷",
-        text: "New beginnings, warmth, and color.",
-        bg: "#f2f8f1",
-        img: "spring.jpg"
-      },
-      {
-        title: "Summer Glow ☀️",
-        text: "Bold colors, sunlight, and freedom.",
-        bg: "#fff6e5",
-        img: "summer.jpg"
-      },
-      {
-        title: "Autumn Calm 🍂",
-        text: "Earthy tones, reflection, and comfort.",
-        bg: "#f7efe5",
-        img: "fall.jpg"
-      }
-    ];
+    if (month >= 2 && month <= 4) bg = "spring.jpg";
+    if (month >= 5 && month <= 7) bg = "summer.jpg";
+    if (month >= 8 && month <= 10) bg = "autumn.jpg";
+    if (month === 11 || month <= 1) bg = "winter.jpg";
 
-    const season = seasons[Math.floor(month / 3)];
-
-    document.body.style.background = season.bg;
-    document.getElementById("season-title").textContent = season.title;
-    document.getElementById("season-text").textContent = season.text;
-    document.getElementById("season-image").src = season.img;
+    document.body.style.backgroundImage = `url(${bg})`;
   </script>
 </body>
 </html>
-
 
