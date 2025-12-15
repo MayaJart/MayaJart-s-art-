@@ -3,20 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <title>Maya’s Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Connects the aesthetic -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      transition: background 1s ease;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 20px;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <h1>Maya’s Art</h1>
-    <p>Original art & custom commissions</p>
-  </header>
+  <div class="container">
+    <h1 id="season-title">Welcome to Maya’s Art</h1>
+    <p id="season-text">
+      A space for art, commissions, and gentle creativity.
+    </p>
 
-  <!-- Seasonal magic -->
-  <script src="season.js"></script>
+    <img id="season-image" src="" alt="Seasonal art">
+  </div>
+
+  <script>
+    const month = new Date().getMonth();
+
+    const seasons = [
+      {
+        title: "Winter Stillness ❄️",
+        text: "Quiet tones, soft light, and cozy creativity.",
+        bg: "#eef3f9",
+        img: "winter.jpg"
+      },
+      {
+        title: "Spring Bloom 🌷",
+        text: "New beginnings, warmth, and color.",
+        bg: "#f2f8f1",
+        img: "spring.jpg"
+      },
+      {
+        title: "Summer Glow ☀️",
+        text: "Bold colors, sunlight, and freedom.",
+        bg: "#fff6e5",
+        img: "summer.jpg"
+      },
+      {
+        title: "Autumn Calm 🍂",
+        text: "Earthy tones, reflection, and comfort.",
+        bg: "#f7efe5",
+        img: "fall.jpg"
+      }
+    ];
+
+    const season = seasons[Math.floor(month / 3)];
+
+    document.body.style.background = season.bg;
+    document.getElementById("season-title").textContent = season.title;
+    document.getElementById("season-text").textContent = season.text;
+    document.getElementById("season-image").src = season.img;
+  </script>
 </body>
 </html>
+
 
 
