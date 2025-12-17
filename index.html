@@ -35,14 +35,53 @@
     p {
       font-size: 1.2rem;
     }
+    .gallery {
+  padding: 40px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
   </style>
 </head>
 
 <body>
   <div class="overlay">
-    <h1>Welcome to My Seasonal Art Gallery</h1>
-    <p>Each season brings a new feeling, a new color, and new inspiration. Stay awhile 🤍</p>
+<section class="gallery">
+  <section class="gallery">
+  <h2>Art Gallery</h2>
+
+  <div class="gallery-grid">
+    <img src="Moo-cow.png" alt="A small highland cow with large bangs">
+    <img src="Reese.png" alt="An adorable dog named Reese">
+    <img src="that-looks-familiar.png" alt="Reese poses for her 'Twinsies!' photo">
   </div>
+</section>
+
+
+  <div class="gallery-grid">
+    <img src="art1.png" alt="Artwork 1">
+    <img src="art2.png" alt="Artwork 2">
+    <img src="art3.png" alt="Artwork 3">
+    <img src="art4.png" alt="Artwork 4">
+  </div>
+</section>
+
 
   <script>
     const month = new Date().getMonth();
