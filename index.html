@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Maya’s Seasonal Art Gallery</title>
+<a href="#art" class="view-art-btn">View the Art</a>
 
   <!-- Fonts -->
   <link id="fontLink" rel="stylesheet">
@@ -56,6 +57,22 @@
 .gallery-grid img:hover {
   transform: scale(1.05);
 }
+.view-art-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.view-art-btn:hover {
+  background: white;
+  transform: scale(1.05);
+}
 
   </style>
 </head>
@@ -63,7 +80,7 @@
 <body>
   <div class="overlay">
 <section class="gallery">
-  <section class="gallery">
+  <section class="gallery" id="art">
   <h2>Art Gallery</h2>
 
   <div class="gallery-grid">
