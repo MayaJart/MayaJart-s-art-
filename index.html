@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <title>Maya’s Seasonal Art Gallery</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link id="fontLink" rel="stylesheet">
 
   <style>
     body {
@@ -13,63 +13,58 @@
       min-height: 100vh;
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat;
-      font-family: 'Poppins', sans-serif;
-      color: #222;
-      transition: background-image 1s ease-in-out;
-    }
-
-    .overlay {
-      background: rgba(255, 255, 255, 0.7);
-      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 40px;
+      transition: background-image 1s ease;
+    }
+
+    .overlay {
+      background: rgba(255,255,255,0.75);
+      padding: 60px;
+      border-radius: 24px;
+      max-width: 700px;
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
       font-size: 3rem;
       margin-bottom: 10px;
     }
 
     p {
       font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
     }
   </style>
 </head>
 
 <body>
   <div class="overlay">
-    <div>
-      <h1>Welcome to My Seasonal Art Gallery</h1>
-      <p>
-        Each season brings a new feeling, a new color, and new inspiration.
-        Stay awhile 🤍
-      </p>
-    </div>
+    <h1>Welcome to My Seasonal Art Gallery</h1>
+    <p>Each season brings a new feeling, a new color, and new inspiration. Stay awhile 🤍</p>
   </div>
 
   <script>
-    const month = new Date().getMonth() + 1;
-    let seasonImage = "spring.png";
+    const month = new Date().getMonth();
 
-    if (month >= 3 && month <= 5) {
-      seasonImage = "spring.png";
-    } else if (month >= 6 && month <= 8) {
-      seasonImage = "summer.png";
-    } else if (month >= 9 && month <= 11) {
-      seasonImage = "fall.png";
-    } else {
-      seasonImage = "winter.png";
-    }
+    const settings = [
+      { img: "winter.png", font: "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" }, // Jan
+      { img: "winter.png", font: "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" }, // Feb
+      { img: "spring.png", font: "https://fonts.googleapis.com/css2?family=Quicksand&display=swap" }, // Mar
+      { img: "spring.png", font: "https://fonts.googleapis.com/css2?family=Quicksand&display=swap" }, // Apr
+      { img: "spring.png", font: "https://fonts.googleapis.com/css2?family=Quicksand&display=swap" }, // May
+      { img: "summer.png", font: "https://fonts.googleapis.com/css2?family=Poppins&display=swap" }, // Jun
+      { img: "summer.png", font: "https://fonts.googleapis.com/css2?family=Poppins&display=swap" }, // Jul
+      { img: "summer.png", font: "https://fonts.googleapis.com/css2?family=Poppins&display=swap" }, // Aug
+      { img: "fall.png", font: "https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" }, // Sep
+      { img: "fall.png", font: "https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" }, // Oct
+      { img: "fall.png", font: "https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" }, // Nov
+      { img: "winter.png", font: "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" }  // Dec
+    ];
 
-    document.body.style.backgroundImage = `url('${seasonImage}')`;
+    document.body.style.backgroundImage = `url('${settings[month].img}')`;
+    document.getElementById("fontLink").href = settings[month].font;
+    document.body.style.fontFamily = "inherit";
   </script>
 </body>
 </html>
-
